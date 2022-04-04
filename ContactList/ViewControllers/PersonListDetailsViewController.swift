@@ -8,18 +8,17 @@
 import UIKit
 
 class PersonListDetailsViewController: UIViewController {
-    // MARK: - IB Outlets
-    @IBOutlet var phone: UILabel!
-    @IBOutlet var email: UILabel!
     
-    var personUser: Person!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = personUser.fullname
-        
-        phone.text = "Phone: \(personUser.phoneNumber)"
-        email.text = "Email: \(personUser.email)"
+
+        title = person.fullName
+        emailLabel.text = "Email: \(person.email)"
+        phoneNumberLabel.text = "Phone: \(person.phoneNumber)"
     }
-    
 }
