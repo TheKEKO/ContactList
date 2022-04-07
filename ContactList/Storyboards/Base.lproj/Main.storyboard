@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +16,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jtH-xQ-Uvd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="separatorColor" systemColor="systemGray3Color"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" textLabel="3sZ-TG-HIw" rowHeight="50" style="IBUITableViewCellStyleDefault" id="HDO-FW-WuG" customClass="Per">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="3sZ-TG-HIw" rowHeight="50" style="IBUITableViewCellStyleDefault" id="HDO-FW-WuG" customClass="Per">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HDO-FW-WuG" id="ddo-Zv-2Oq">
@@ -34,8 +35,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <connections>
                                     <segue destination="3XL-PC-F41" kind="show" identifier="" id="Q1g-od-G9U"/>
                                 </connections>
@@ -46,8 +48,8 @@
                             <outlet property="delegate" destination="Po9-Xc-feb" id="cm3-ry-Ik5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Persons List" image="person.circle.fill" catalog="system" id="Q2w-p6-ufi">
-                        <color key="badgeColor" red="0.0" green="0.4197574912" blue="0.80833118559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="person.circle.fill" catalog="system" id="Q2w-p6-ufi">
+                        <color key="badgeColor" systemColor="systemGray5Color"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Persons List" id="kpR-7b-MFy"/>
                 </tableViewController>
@@ -86,7 +88,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wWL-8H-34x"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="GIk-p5-w5A" firstAttribute="top" secondItem="wWL-8H-34x" secondAttribute="top" constant="50" id="Ch4-Cc-SXT"/>
                             <constraint firstItem="wWL-8H-34x" firstAttribute="trailing" secondItem="GIk-p5-w5A" secondAttribute="trailing" constant="16" id="Uh4-p7-qw9"/>
@@ -96,8 +98,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QBO-ez-pu4"/>
                     <connections>
-                        <outlet property="email" destination="qG5-9G-1Tn" id="q4x-rM-Yoj"/>
-                        <outlet property="phone" destination="AJ2-aH-lCM" id="c0b-3c-bP5"/>
+                        <outlet property="emailLabel" destination="AJ2-aH-lCM" id="sQp-Nw-j4N"/>
+                        <outlet property="phoneNumberLabel" destination="qG5-9G-1Tn" id="ImJ-5w-6Nf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7s-xf-Y1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -114,6 +116,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xIS-Pr-YLL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <connections>
                         <segue destination="8UU-V4-4Fo" kind="relationship" relationship="rootViewController" id="U6J-GT-UFZ"/>
@@ -123,16 +126,17 @@
             </objects>
             <point key="canvasLocation" x="-851" y="469"/>
         </scene>
-        <!--Persons List-->
+        <!--Contact List-->
         <scene sceneID="hKI-Yo-oQ2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8UU-V4-4Fo" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8UU-V4-4Fo" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Persons List" id="DuB-a9-QXt"/>
+                    <navigationItem key="navigationItem" title="Contact List" id="DuB-a9-QXt"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3iI-mD-iRv">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="Po9-Xc-feb" kind="relationship" relationship="viewControllers" id="fLh-eN-LI0"/>
@@ -150,15 +154,22 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="btV-Wd-xJa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <color key="separatorColor" systemColor="systemGray3Color"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contact" id="yUc-6V-ddN">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="yUc-6V-ddN">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yUc-6V-ddN" id="bHX-th-ftQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -166,8 +177,8 @@
                             <outlet property="delegate" destination="Gku-kk-Xnc" id="GH6-vb-zbF"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Persons List 2" image="person.circle.fill" catalog="system" id="VjS-az-jTF">
-                        <color key="badgeColor" red="0.0" green="0.4197574912" blue="0.80833118559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="Full Info" image="person.crop.square.fill" catalog="system" id="VjS-az-jTF">
+                        <color key="badgeColor" systemColor="systemGray5Color"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Persons List" id="hkm-MH-d9M"/>
                 </tableViewController>
@@ -178,11 +189,21 @@
     </scenes>
     <resources>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

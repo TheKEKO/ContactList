@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41BE28B27FF017400590351 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41BE28A27FF017400590351 /* TabBarViewController.swift */; };
 		D42FDA2427EA6ADC00DC9D93 /* PersonDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42FDA2327EA6ADC00DC9D93 /* PersonDetailedViewController.swift */; };
 		D46A07B827E9C3CF008D5611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A07B727E9C3CF008D5611 /* AppDelegate.swift */; };
 		D46A07BA27E9C3CF008D5611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46A07B927E9C3CF008D5611 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41BE28A27FF017400590351 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D42FDA2327EA6ADC00DC9D93 /* PersonDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailedViewController.swift; sourceTree = "<group>"; };
 		D46A07B427E9C3CF008D5611 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46A07B727E9C3CF008D5611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		D46A07CB27E9C408008D5611 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D41BE28A27FF017400590351 /* TabBarViewController.swift */,
 				D46A07D627E9D94B008D5611 /* PersonListViewController.swift */,
 				D42FDA2327EA6ADC00DC9D93 /* PersonDetailedViewController.swift */,
 				D4CCB27827E9EBA300CB9AEB /* PersonListDetailsViewController.swift */,
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41BE28B27FF017400590351 /* TabBarViewController.swift in Sources */,
 				D4CCB27927E9EBA300CB9AEB /* PersonListDetailsViewController.swift in Sources */,
 				D46A07D527E9C9FB008D5611 /* Person.swift in Sources */,
 				D46A07D227E9C808008D5611 /* DataManager.swift in Sources */,
